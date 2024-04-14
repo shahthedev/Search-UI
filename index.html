@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search/Filter UI</title>
+    <script src="searchui.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="search-filter.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">   
+</head>
+  <body>
+    <div class="container mt-3">
+
+      <div class="container">
+        <div class="row searchFilter" >
+           <div class="col-sm-12" >
+            <div class="input-group" >
+             <input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown" >
+             <i class="fa fa-filter position-absolute" id="toggleFilter"></i>
+             <i class="fa fa-search position-absolute" id="toggleSearch"></i>
+
+            <div class="dropdown-menu dropdown-menu-right" id="filter">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 mt-3">
+                    
+                    <div>
+                      <div class="" id="states">
+                        <h6>States</h6>
+                        <input class="form-control" type="text" placeholder="Filter States" aria-label="Filter States">
+
+                      <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          California
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Utah
+                        </label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Arizona
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Florida
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Washington
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Hawaii
+                        </label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Montana
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Nevada
+                        </label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          South Dakota
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <label class="form-check-label" >
+                          Texas
+                        </label>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="mt-3" id="states">
+                      <h6>SORT BY</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Select...</option>
+                      <option value="1">Relevance</option>
+                      <option value="2">Title</option>
+                      <option value="3">State</option>
+                      <option value="3">State -> Title</option>
+                      <option value="3">Heritage Site -> State -> Title</option>
+                    </select>
+                      <h6 class="mt-3">DATE ESTABLISHED</h6>
+                      <input class="form-control" type="text" placeholder="Filter Date Established" aria-label="Filter Date Established">
+
+                    <div class="form-check mt-2 states">
+                     <div> <input class="form-check-input" type="checkbox" value="">
+                      <label class="form-check-label" >
+                        Within the last 50 years                     
+                       </label></div>
+                      <span>14</span>
+                    </div>
+                    <div class="form-check mt-2 states">
+                      <div> <input class="form-check-input" type="checkbox" value="">
+                       <label class="form-check-label" >
+                         50 - 100 years ago
+                       </label></div>
+                       <span>14</span>
+                     </div>
+                     <div class="form-check mt-2 states">
+                      <div> <input class="form-check-input" type="checkbox" value="">
+                       <label class="form-check-label" >
+                        More than 100 years ago                       
+                      </label></div>
+                       <span>14</span>
+                     </div>
+                  </div> 
+                </div> 
+                <div class="col-lg-4">
+                                          
+                  <div class="mt-3">
+                    <h6>WORLD HERITAGE SITE</h6>
+                    <div class="states" id="states">
+                  <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label" >
+                      World Heritage Site
+                    </label>
+                  </div>
+                  <span>13</span>
+                </div>
+                  </div>
+                  <div class="mt-3">
+                    <h6>VISITORS</h6>
+                    <div class="states" id="states">
+                  <div class="visitors mt-2">
+                      0 - 10000
+                  </div>
+                  <span>14</span>
+                  </div>
+                  <div class="states" id="states">
+                    <div class="visitors mt-2">
+                      0 - 10000
+                    </div>
+                    <span>8</span>
+                    </div>
+                    <div class="states" id="states">
+                      <div class="visitors mt-2">
+                        0 - 10000
+                      </div>
+                      <span>7</span>
+                      </div>
+                      <div class="states" id="states">
+                        <div class="visitors mt-2">
+                          0 - 10000
+                        </div>
+                        <span>14</span>
+                        </div>
+                        <div class="states" id="states">
+                          <div class="visitors mt-2">
+                            0 - 10000
+                  </div>
+                  <span>12</span>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                
+                
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <button type="button " class="btn btn-primary">Save Filters</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="sui-layout-main-header__inner"><div class="sui-paging-info">Showing <strong>1 - 20</strong> out of <strong>59</strong></div></div>
+      </div>
+        <div class="container d-flex justify-content-center ">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+              <div class="card-body d-flex justify-content-between align-items-end">
+                <h5 class="card-title text-truncate">Acadia</h5>
+                <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
+                alt="Palm Springs Road" />
+                <div class="card-body d-flex justify-content-between align-items-end">
+                  <h5 class="card-title text-truncate">Arches</h5>
+                  <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo2"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
+                alt="Los Angeles Skyscrapers" />
+                <div class="card-body d-flex justify-content-between align-items-end">
+                  <h5 class="card-title text-truncate">Capitol Reef</h5>
+                  <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo3"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+                </div>       
+            </div>           
+          </div>
+        </div>        
+      </div>
+
+      <div class="container ">
+        <div class="dropdown-card shadow p-3  bg-white rounded mt-4" id="moreInfo">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">ACADIA</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top dropimg">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="dropdown-card p-3 shadow bg-white rounded mt-4" id="moreInfo2">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">Arches</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container ">
+        <div class="dropdown-card p-3 shadow bg-white rounded mt-4" id="moreInfo3">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">Capitol Reef</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-center mt-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+              <div class="card-body d-flex justify-content-between align-items-end">
+                <h5 class="card-title text-truncate">Acadia</h5>
+                <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo4"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
+                alt="Palm Springs Road" />
+                <div class="card-body d-flex justify-content-between align-items-end">
+                  <h5 class="card-title text-truncate">Arches</h5>
+                  <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo5"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
+                alt="Los Angeles Skyscrapers" />
+                <div class="card-body d-flex justify-content-between align-items-end">
+                  <h5 class="card-title text-truncate">Capitol Reef</h5>
+                  <button type="button" class="btn btn-outline-dark" aria-haspopup="true" aria-expanded="false" id="togglemoreInfo6"><span class="label-icon " >More Info</span> <span class="fa fa-circle-chevron-down ms-1" >&nbsp;</span></button>
+                </div>       
+            </div>           
+          </div>
+        </div>        
+      </div>
+      <div class="container ">
+        <div class="dropdown-card shadow p-3  bg-white rounded mt-4" id="moreInfo4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">ACADIA</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top dropimg">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="dropdown-card p-3 shadow bg-white rounded mt-4" id="moreInfo5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">Arches</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="container ">
+        <div class="dropdown-card p-3 shadow bg-white rounded mt-4" id="moreInfo6">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="text-secondary">Capitol Reef</h5>
+              </div>
+            </div>
+            
+            
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top">
+              </div>
+              <div class="col-lg-8">
+                <ul class="sui-result__details list-unstyled"><li><span class="sui-result__key">"id"</span> : <span class="sui-result__value">"park_acadia"</span></li><li><span class="sui-result__key">"visitors"</span> : <span class="sui-result__value">"3303393"</span></li><li><span class="sui-result__key">"square_km"</span> : <span class="sui-result__value">"198.5"</span></li><li><span class="sui-result__key">"world_heritage_site"</span> : <span class="sui-result__value">"false"</span></li><li><span class="sui-result__key">"date_established"</span> : <span class="sui-result__value">"1919-02-26T06:00:00Z"</span></li><li><span class="sui-result__key">"image_url"</span> : <span class="sui-result__value">"https://storage.googleapis.com/public-demo-assets.swiftype.info/swiftype-dot-com-search-ui-national-parks-demo/D7EA0C7E-DB65-18FD-6C41020E643A4686.jpg"</span></li><li><span class="sui-result__key">""description""</span> : <span class="sui-result__value">"Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats."</span></li><li><span class="sui-result__key">"location"</span> : <span class="sui-result__value">"44.35,-68.21"</span></li><li><span class="sui-result__key">"acres"</span> : <span class="sui-result__value">"49057.36"</span></li><li><span class="sui-result__key">"title"</span> : <span class="sui-result__value">Acadia</span></li><li><span class="sui-result__key">"nps_link"</span> : <span class="sui-result__value">"https://www.nps.gov/acad/index.htm"</span></li><li><span class="sui-result__key">"states"</span> : <span class="sui-result__value">"Maine"</span></li></ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+
+ 
+      </div>
+      <script>
+        $('#toggleFilter').click(function(){
+          $('#filter').slideToggle()
+        })
+        $('#togglemoreInfo').click(function(){
+          $('#moreInfo').slideToggle();
+          $('#moreInfo2').hide()
+          $('#moreInfo3').hide();
+          $('#moreInfo4').hide();
+          $('#moreInfo5').hide();
+          $('#moreInfo6').hide();
+        })
+        $('#togglemoreInfo2').click(function(){
+          $('#moreInfo2').slideToggle();
+          $('#moreInfo').hide();
+          $('#moreInfo3').hide();
+          $('#moreInfo4').hide();
+          $('#moreInfo5').hide();
+          $('#moreInfo6').hide();
+
+        })
+        $('#togglemoreInfo3').click(function(){
+          $('#moreInfo3').slideToggle();
+          $('#moreInfo').hide();
+          $('#moreInfo2').hide();
+          $('#moreInfo4').hide();
+          $('#moreInfo5').hide();
+          $('#moreInfo6').hide();
+        })
+        $('#togglemoreInfo4').click(function(){
+          $('#moreInfo4').slideToggle();
+          $('#moreInfo').hide()
+          $('#moreInfo2').hide()
+          $('#moreInfo3').hide();
+          $('#moreInfo5').hide();
+          $('#moreInfo6').hide();
+        })
+        $('#togglemoreInfo5').click(function(){
+          $('#moreInfo5').slideToggle();
+          $('#moreInfo').hide()
+          $('#moreInfo2').hide()
+          $('#moreInfo3').hide();
+          $('#moreInfo4').hide();
+          $('#moreInfo').hide();
+
+        })
+        $('#togglemoreInfo6').click(function(){
+          $('#moreInfo6').slideToggle();
+          $('#moreInfo').hide()
+          $('#moreInfo2').hide()
+          $('#moreInfo3').hide();
+          $('#moreInfo4').hide();
+          $('#moreInfo5').hide();
+
+        })
+      </script>
+        <script src="jquery-3.6.3.min.js"></script>
+</body>
+</html>
